@@ -115,7 +115,7 @@ class TFCM_block(nn.Module):
 
     def forward(self, input):
         output = self.pconv1(input)
-        output = self.dila_conv(input)
+        output = self.dila_conv(output)
         output = self.pconv2(output)
         return input + output
 
